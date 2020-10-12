@@ -3,13 +3,15 @@
 % title font on cover
 \renewcommand{\lsCoverTitleFont}[1]{%
     \sffamily\addfontfeatures{Scale=MatchUppercase}%
-    \fontsize{49pt}{16.5mm}\selectfont #1}
+    \fontsize{38pt}{12mm}\selectfont #1}
+    
+\renewcommand{\lsChapterFooterSize}{\footnotesize}
+
 
 \makeatletter
 \def\blx@maxline{77}
 \makeatother
 
-\usepackage{tikz}
 \usepackage{tikz-qtree}
 \usepackage{tikz-qtree-compat}
 \usetikzlibrary{positioning,decorations.pathmorphing,decorations,fit,shapes,arrows.meta,arrows,shapes.multipart,tikzmark}
@@ -50,14 +52,3 @@
   \field{origdate}
   \field{urldate}
 }
-
-% Fuß & Trips
-\newcommand{\tief}[1]{\raisebox{-0.8ex}{\footnotesize #1}}
-\newcommand{\hoch}[1]{\raisebox{+0.8ex}{\footnotesize #1}}
-\newcommand{\neu}[1]{$\bullet$\marginpar{\textbf{$\leftarrow$neu}}#1}
-
-% downstep
-\newcommand{\ds}{{\fontspec{CharisSIL}ꜜ}}
-
-% bobaljik
-\newcommand{\pro}{\textsc{pro}}

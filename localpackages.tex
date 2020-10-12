@@ -4,13 +4,6 @@
 \usepackage{tabulary}
 \usepackage{amsmath}
 \usepackage{multicol}
-\usepackage{lipsum}
-\usepackage{tipa}
-\usepackage{avm}
-\avmfont{\sc}
-\avmoptions{sorted,active}
-\avmvalfont{\rm}
-\avmsortfont{\scriptsize\it}
 \usepackage{tabto}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                              %%%
@@ -22,8 +15,6 @@
 \usepackage{./langsci-gb4e}
 \usepackage{./langsci-optional}
 \usepackage{./langsci-lgr}
-%% if you want the source line of examples to be in italics, uncomment the following line
-% \def\exfont{\it}
 
 \usepackage[autostyle=true]{csquotes}
 
@@ -127,12 +118,20 @@
 % bmatrix (Borsley)
 \usepackage{mathtools}
 
-%% Music! (Hedde)
-%\usepackage{musixtex}
-
 \usepackage{soul}
 \DeclareRobustCommand{\greybox}[1]{{\sethlcolor{lightgray}\hl{#1}}}
 
 \newfontfamily\cjkfont
   [Scale=MatchLowercase]{SourceHanSerifSC-Regular.otf}
 \AdditionalFontImprint{Source Han Serif}
+
+% % Inculding verse package without clashes with hyperref
+% % https://tex.stackexchange.com/a/239231
+\let\orignewcommand\newcommand  % store the original \newcommand
+\let\newcommand\providecommand  % make \newcommand behave like \providecommand
+\RequirePackage{verse}
+\let\newcommand\orignewcommand  % use the original `\newcommand` in future
+\makeatletter
+% Use the original definition from verse.sty
+\renewcommand*{\theHpoemline}{\arabic{verse@envctr}.\arabic{poemline}}
+\makeatother
