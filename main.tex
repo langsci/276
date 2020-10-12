@@ -9,14 +9,11 @@
 % Some lines start with %. Remove the % to include them
 
 \documentclass[output=book
-		,modfonts
-		,nonflat
         ,collection
         ,collectionchapter
-        ,collectiontoclongg
         ,biblatex
 % 	        ,coverus
-		  ]{langsci/langscibook}
+		  ]{./langscibook}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -42,16 +39,10 @@
 
 \currentpdfbookmark{Contents}{name} % adds a PDF bookmark
 \tableofcontents
-%\include{chapters/preface}
-\include{chapters/acknowledgments}
 
-%% Additional prefaces and/or introductions that also have authors
-\lsCollectionPaperFrontmatterMode % Enter the Frontmatter Mode.
+\include{chapters/acknowledgments}
 \includepaper{chapters/preface}
-%\includepaper{chapters/prefaceEd2}
-\lsCollectionPaperMainmatterMode % Leave the Frontmatter Mode
-\setcounter{chapter}{0} % Reset the chapter counter so that preceeding prefaces are not counted
-%%
+
 \mainmatter
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,25 +75,13 @@
 \includepaper{chapters/20} %
 \includepaper{chapters/21} %
 \includepaper{chapters/22} %
-% % % %
-% % % %% copy the lines above and adapt as necessary
-% % % %
-% % % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% % % %%%%                                              %%%
-% % % %%%%             Backmatter                       %%%
-% % % %%%%                                              %%%
-% % % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% % % %
-% % % %% There is normally no need to change the backmatter section
+
+
 \input{backmatter.tex}
-% % % %
+
 \end{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                              %%%
-%%%                  END                         %%%
-%%%                                              %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 % you can create your book by running
 % xelatex main.tex
