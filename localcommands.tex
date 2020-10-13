@@ -31,6 +31,7 @@
             (#2) node [font=\small, near start, below] () {#3};}
 
 \newcommand{\tuple}[1]{\ensuremath{\left \langle \text{#1} \right \rangle }}
+\newcommand{\smalltuple}[1]{\ensuremath{\langle \text{#1} \rangle }}
 
 \def\citeapos#1{\citeauthor{#1}'s (\citeyear{#1})}
 \def\citeaposalt#1{\citeauthor{#1}'s \citeyear{#1}}
@@ -52,3 +53,7 @@
   \field{origdate}
   \field{urldate}
 }
+
+\providecommand\zerosup[1]{#1\ensuremath{^0}}
+
+\DeclareMathOperator{\Domi}{d}
