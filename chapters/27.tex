@@ -98,15 +98,15 @@ linguists, as shown by Simon \citet{Dik1989} or Kees \citet{Hengeveld1992},
 differentiate word classes by two prototypical functions or \isi{parameters}, such as
 predication vs.\ referentiality, and head vs.\ modifier, with the resulting
 four classes arranged in an implicational hierarchical order\is{implicational
-relations} in \REF{ex:key:27.1}
+relations} in \REF{ex:27.1}
 that corresponds to the sequence verb > noun > adjective > adverb
 \citep{Hengeveld1992}.
 
-\ea\label{ex:key:27.1}%
-    \begin{tabulary}{1\textwidth}{J@{> }J@{> }J@{> }J}
+\ea\label{ex:27.1}%
+    \begin{tabularx}{\linewidth}[t]{Q@{ > }Q@{ > }Q@{ > }Q}
         Head of\newline pred.\ phrase & Head of\newline ref.\ phrase &
         Modifier of head\newline of ref.\ phrase & Modifier of head\newline of pred.\ phase\\
-    \end{tabulary}
+    \end{tabularx}
 \z
 
 The \enquote{radical constructionist} William \citet{Croft2005} also notes the
@@ -221,10 +221,9 @@ classes, i.e., nouns, verbs, adjectives, \isi{adverbs}, satisfy various clusters
 properties.  In effect, the unidimensional category of word class has been
 replaced by multidimensional matrices of sets of properties.
 
-\largerpage
 A similar suggestion is inherent in \citeauthor{Crystal1967}’s
 (\citeyear{Crystal1967}: 46) list of criteria for
-nouns in English, reproduced in \figref{fig:key:27.1}.
+nouns in English, reproduced in \figref{fig:27.1}.
 
 \begin{figure}
     \centering
@@ -235,22 +234,22 @@ nouns in English, reproduced in \figref{fig:key:27.1}.
         \node (3) at (-1.25, 1.5) {3};
         \node (4) at (-1.25, 0.15) {4};
 
-        \node (news) at (-7, 2.5) [fill=gray!20!white]
+        \node (news) at (-7, 2.5) [fill=black!20]
             {+1\\−2\hphantom{\hspace{1em}\enquote{information}}\\\hspace*{1em}e.g.\\+3\hspace{1em}\enquote{news}\\−4};
 
         \node (info) [below=.5cm of news.south west, anchor=north west,
-            fill=gray!20!white]
+            fill=black!20]
             {+1\\−2\\\hspace*{1em}e.g.\\+3\hspace{1em}\enquote{information}\\+4};
 
         \node (cent) [below=.5cm of info.south west, anchor=north west,
-            fill=gray!20!white]
+            fill=black!20]
         {central class\\%
         +1\hphantom{\hspace{1em}\enquote{information}}\\%
         +2\hspace{1em}\enquote{hardship}\\%
         \hspace*{1em}e.g.\\%
         +3\hspace{1em}\enquote{peroration}\\+4};
 
-        \node (girl) at (7, 2.0) [fill=gray!20!white]
+        \node (girl) at (7, 2.0) [fill=black!20]
             {+1\hphantom{\hspace{1em}\enquote{information}}\\%
                 +2\hspace{1em}\enquote{boy}\\%
                 \hspace*{1em}e.g.\\%
@@ -258,18 +257,19 @@ nouns in English, reproduced in \figref{fig:key:27.1}.
             −4};
 
         \node (phon) [below=.5cm of girl.south west, anchor=north west,
-            fill=gray!20!white]
+            fill=black!20]
             {+1\hphantom{\hspace{1em}\enquote{information}}\\%
                 −2\\%
                 \hspace*{1em}e.g.\\%
                 −3\hspace{1em}\enquote{phonetics}\\%
             −4};
 
-        \node (legend) at (0, -5.5) [color=gray!20!blue]
-            {1. May act as subject\\%
-             2. Inflect for number\\%
-             3. Co-occur with article\\%
-             4. Morphological indication};
+% %         \node (legend) [below=.5cm of phon.south west, anchor=north west]
+% %             {Legend:\\
+% %              1. May act as subject\\%
+% %              2. Inflect for number\\%
+% %              3. Co-occur with article\\%
+% %              4. Morphological indication};
 
         \draw [->] (news.east) to (-2, -1.0);
         \draw [->] (info.east) to (0, -2);
@@ -284,14 +284,18 @@ nouns in English, reproduced in \figref{fig:key:27.1}.
         \draw [clip] (0, 1) circle (2cm);
         \draw [clip] (1, -1) circle (2cm);
         \draw [clip] (-1, -1) circle (2cm);
-        \draw (1, -1) [fill=gray!30!white] circle (2cm);
+        \draw (1, -1) [fill=black!20] circle (2cm);
 
         \draw [->] (cent.east) to (0, 0);
         \draw [->] (girl.west) to (4);
         \draw [->] (phon.west) to (0, -3.5);
 
     \end{tikzpicture}
-    \caption{\citegen{Crystal1967} criteria for nouns}\label{fig:key:27.1}
+    \caption{\citegen{Crystal1967} criteria for nouns. \emph{Legend}:
+             1 -- May act as subject; 
+             2 -- Inflect for number;
+             3 -- Co-occur with article;
+             4 -- Morphological indication.\label{fig:27.1}}
 \end{figure}
 
 \citet{Gross1986} gives a classification of \ili{French} verbs according to the types
@@ -301,29 +305,26 @@ subject and 32 complement types, setting up a matrix of 36 verb types.
 In a discussion of the problems of universal and language specific
 classification \citet[94]{Haspelmath2012} presents the overlapping system of
 word classes in \ili{Chamorro}, following \citet{Topping1973} and \citet{Chung2012},
-according to the properties and classes as in \tabref{tab:key:27.1}.
+according to the properties and classes as in \tabref{tab:27.1}.
 
 \begin{table}
-\centering
-{\small
-\begin{tabularx}{\textwidth}{lXXXX}
+\fittable{\begin{tabular}{lcccc}
 \lsptoprule
-property                        & ‘see’-type words & ‘go’-type words & ‘big’-type words & ‘person’-type words\\
-\midrule
+                                & \multicolumn{4}{c}{Word type}\\\cmidrule(lr){2-5}
+Property                        & ‘see’ & ‘go’ & ‘big’ & ‘person’\\\midrule
 passive                         & +                & −               & −                & −\\
-\emph{Yo’-}type pronoun Subject & −                & +               & +                & +\\
+\emph{Yo’-}type pronoun subject & −                & +               & +                & +\\
 Infinitive                      & +                & +               & +                & +\\
 Incorporation                   & −                & −               & −                & +\\
 Prefixation with \emph{mi-}     & −                & −               & −                & +\\
-Subject-Predicate Agreement     & +                & +               & +                & −\\
-Specific External Agreement     & +                & +               & −                & −\\
-Person-Number Agreement (realis) & +                & −               & −                & −\\
-                                & Transitival                     & Intransiverb     & Adjectival      & Nominal\\
+Subject-predicate agreement     & +                & +               & +                & −\\
+Specific external agreement     & +                & +               & −                & −\\
+Person-number agreement (realis) & +                & −               & −                & −\\
+                                & Transitival      & Intransiverb     & Adjectival      & Nominal\\
 \lspbottomrule
-\end{tabularx}
-}
+\end{tabular}}
 \caption{\citegen{Haspelmath2012} extension of \citegen{Chung2012} table of
-\mbox{grammatical} properties and clauses in Chamorro}\label{tab:key:27.1}
+\mbox{grammatical} properties and clauses in Chamorro}\label{tab:27.1}
 \end{table}
 
 In contrast with more \enquote{regular} languages like \ili{Latin}, which has
@@ -331,32 +332,21 @@ the two major classes of verbs and nouns, with the two subclasses nouns
 (\emph{nomen substantivum}) and adjectives (\emph{nomen adjectivum}) in the
 latter group as distinguished by properties of having case and (in)variable
 gender, Haspelmath argues that \ili{Chamorro} has six possible word class
-systems in view of the properties in \tabref{tab:key:27.1}, as illustrated in
-\tabref{tab:key:27.2}.
+systems in view of the properties in \tabref{tab:27.1}, as illustrated in
+\figref{tab:27.2}.
 
-\begin{table}
-\centering
-{\small
-\begin{tabularx}{1\textwidth}{cp{2.24cm}p{2.24cm}p{2.24cm}p{2.24cm}}
-\lsptoprule
-A & \multicolumn{2}{C|}{Transitival + Intransiverb} & \multicolumn{2}{c}{Adjectival + Nominal}\\
-\midrule
-B & \multicolumn{1}{C|}{Transitival} & \multicolumn{3}{c}{Intransiverb + Adjectival + Nominal}\\
-\midrule
-C & \multicolumn{3}{c|}{Transitival + Intransiverb + Adjectiverb} & \multicolumn{1}{c}{Nominal}\\
-\midrule
-D & \multicolumn{2}{c|}{Transitival + Intransiverb} &
-\multicolumn{1}{c|}{Adjectival} & \multicolumn{1}{c}{Nominal}\\
-\midrule
-E & \multicolumn{2}{c|}{Transitival} & \multicolumn{1}{c|}{Intransiverb} & \multicolumn{1}{c}{Adjectival + Nominal}\\
-\midrule
-F & \multicolumn{1}{c}{Transitival} & \multicolumn{2}{|c|}{Intransiverb + Adjectival} & \multicolumn{1}{c}{Nominal}\\
-\lspbottomrule
-\end{tabularx}
-}
+\begin{figure}
+\fbox{\resizebox{\textwidth - 3\fboxsep}{!}{\begin{tabular}{l ccc}
+A & Transitival + Intransiverb & \multicolumn{2}{c}{Adjectival + Nominal}\\\cmidrule(lr){2-2}\cmidrule(lr){3-4}
+B & Transitival & \multicolumn{2}{c}{Intransiverb + Adjectival + Nominal}\\\cmidrule(lr){2-2}\cmidrule(lr){3-4}
+C & \multicolumn{2}{c}{Transitival + Intransiverb + Adjectiverb} & Nominal\\\cmidrule(lr){2-3}\cmidrule(lr){4-4}
+D & Transitival + Intransiverb & Adjectival & Nominal\\\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}
+E & Transitival & Intransiverb & Adjectival + Nominal\\\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}
+F & Transitival & Intransiverb + Adjectival & Nominal\\\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}
+\end{tabular}}}
 \caption{The six possible word class systems of Chamorro according to
-\textcite{Haspelmath2012}}\label{tab:key:27.2}
-\end{table}
+\textcite{Haspelmath2012}}\label{tab:27.2}
+\end{figure}
 
 The properties in question can be of various ranks and significance, as claimed
 by \citet{Crystal1967}, since some may extend to more items than others, e.g.,
@@ -383,16 +373,13 @@ categories}
 
 If we examine auxiliaries in \ili{Hungarian}, we can identify the following
 properties that distinguish them from main verbs that also take infinitives as
-their complements.\footnote{Note that the first two properties \REF{ex:key:27.2}
-    and \REF{ex:key:27.3} below lump together subclasses of main verbs with (some)
+their complements.\footnote{Note that the first two properties \REF{ex:27.2}
+    and \REF{ex:27.3} below lump together subclasses of main verbs with (some)
 auxiliaries.}
 
-\newpage
-
-\largerpage
-\begin{exe}\label{ex:key:27.2}
+\begin{exe}\label{ex:27.2}
     \ex Split complex verbs, i.e., a combination of Particle + Verb
-    construction, see (\ref{ex:key:27.2}b,c)\footnotemark
+    construction, see (\ref{ex:27.2}b,c)\footnotemark
     \begin{xlist}
     \exi{i.} \emph{utál} ‘hate’, \emph{szégyell} ‘be ashamed to’, \dots{}
     \exi{ii.} \emph{akar} ‘want’, \emph{próbál} ‘try’, \emph{tud} ‘know, can’,
@@ -416,66 +403,50 @@ auxiliaries.}
                 in    want-\Ssg{}  come-\Inf{}\\
         \glt    ‘you will come in’}
     \end{xlist}
-\end{exe}\footnotetext{As is illustrated in (\ref{ex:key:27.2}i) and
-    (\ref{ex:key:27.2}a,a$'$), not all verbs can split the complex verbs in
+\end{exe}\footnotetext{As is illustrated in (\ref{ex:27.2}i) and
+    (\ref{ex:27.2}a,a$'$), not all verbs can split the complex verbs in
     their complement infinitivals. Those that do are listed in
-    (\ref{ex:key:27.2}ii--iii) and illustrated in (\ref{ex:key:27.2}b,c), where
-    (\ref{ex:key:27.2}ii) are examples of main verbs and (\ref{ex:key:27.2}iii)
-    those of auxiliaries, as seen in~\Cref{tab:key:27.3}. The phenomenon was
+    (\ref{ex:27.2}ii--iii) and illustrated in (\ref{ex:27.2}b,c), where
+    (\ref{ex:27.2}ii) are examples of main verbs and (\ref{ex:27.2}iii)
+    those of auxiliaries, as seen in~\Cref{tab:27.3}. The phenomenon was
     first described by \textcite{Proszekyetal1984} and in more detail by
     \textcite{KalmanCetal1989}, though their conditions are not followed
 here, cf.\ also \textcite{Kenesei2000}.}
 
-\ea\label{ex:key:27.3}
+\ea\label{ex:27.3}
     Has tense/modal meaning\\
     \emph{tud} ‘be.able’, \emph{bír} ‘can’, \emph{fog} ‘will’, \emph{kell}
     ‘must’, \emph{szabad} ‘may, is allowed to’, \emph{lehet} ‘may, is possible’
-\z
-
-\ea\label{ex:key:27.4}
+\ex\label{ex:27.4}
     Has no present or past tense forms\\
     \emph{szokott} ‘usually does’; \emph{fog} ‘will’, \emph{szabad} ‘may, is
     allowed to’
-\z
-
-\ea\label{ex:key:27.5}
+\ex\label{ex:27.5}
     Has no person or number agreement\\
     \emph{kell} ‘must’, \emph{szabad} ‘may, is allowed to’, \emph{lehet} ‘may,
     is possible’
-\z
-
-\ea\label{ex:key:27.6}
+\ex\label{ex:27.6}
     Has no infinitival form\\
     \emph{fog} ‘will’, \emph{szokott} ‘usually does’, \emph{szabad} ‘is allowed
     to’, \emph{lehet} ‘is possible’
-\z
-
-\ea\label{ex:key:27.7}
+\ex\label{ex:27.7}
     Has no thematic subject (external argument)\\
     \emph{fog} ‘will’, \emph{szokott} ‘usually does’, \emph{talál} ‘happen to’;
     passive \emph{van} + V\emph{-va/ve}, \emph{kell} ‘must’,
     \emph{szabad} ‘is allowed to’, \emph{lehet} ‘is possible’
-\z
-
-\ea\label{ex:key:27.8}
+\ex\label{ex:27.8}
     Has no potential inflection (i.e., missing \emph{-hat/het} ‘may’ affixation)\\
     \emph{fog} ‘will’, \emph{szokott} ‘usually does’, \emph{talál} ‘happen to’;
     \emph{szabad} ‘is allowed to’
-\z
-
-\ea\label{ex:key:27.9}
+\ex\label{ex:27.9}
     Has no conditional inflection (i.e., missing \emph{-na/ne} ‘would’
     affixation)\\
     \emph{fog} ‘will’, \emph{szokott} ‘usually does’
-\z
-
-\ea\label{ex:key:27.10}
+\ex\label{ex:27.10}
     Has no imperative/subjunctive forms\\
     \emph{fog} ‘will’, \emph{szokott} ‘usually does’, \emph{talál} ‘happen to’
-\z
-
-\ea\label{ex:key:27.11}
-    Has person-marked infinitival complements, see (\ref{ex:key:27.11}a)\\
+\ex\label{ex:27.11}
+    Has person-marked infinitival complements, see (\ref{ex:27.11}a)\\
     \emph{kell} ‘must’, \emph{szabad} ‘is allowed to’, \emph{lehet} ‘is
     possible’
     \ea \ili{Hungarian}\\
@@ -486,9 +457,9 @@ here, cf.\ also \textcite{Kenesei2000}.}
 \z
 
 Moreover, the above list is augmented by restrictions on syntactic positions,
-i.e., what complement VPs each verb in the list can take, cf.\ \REF{ex:key:27.12}.
+i.e., what complement VPs each verb in the list can take, cf.\ \REF{ex:27.12}.
 
-\ea\label{ex:key:27.12} \ili{Hungarian}
+\ea\label{ex:27.12} \ili{Hungarian}
     \ea[]{%
     \gll    be  fog   kell-eni     tud-ni       jön-ni\\
             in  will  must-\Inf{}  be.able-\Inf{}  come-\Inf{}\\
@@ -507,63 +478,75 @@ i.e., what complement VPs each verb in the list can take, cf.\ \REF{ex:key:27.12
 These properties set apart main verbs (in bold type, with each exemplifying a
 large array) and the single items of auxiliaries (in normal type). And, what is
 more important, there are no two auxiliaries that are characterized by the same
-set of features, as shown in \tabref{tab:key:27.3}, in which the lack of a
+set of features, as shown in \tabref{tab:27.3}, in which the lack of a
 property is marked by a minus sign.\footnote{The star in the box at the bottom
     indicates the irrelevance of the property. The ± sign in line 2 shows that
     some verbs in this group have modal meanings, and in line 3 that speakers
     vary as to the acceptability of the Past Tense form of \emph{szabad}.}
 
 \begin{table}
-{\smaller
-\begin{tabularx}{\textwidth}{lXXXXX}
+\begin{tabular}{l *{10}{c}}
 \lsptoprule
-\textbf{Verb}                    & \textbf{\emph{utál}}\newline ‘hate’ & \textbf{\emph{akar}} ‘want’ & \textbf{\emph{bír}}\newline ‘can’ & \emph{fog}\newline ‘will’ & \emph{szokott}\newline ‘usually’ \\
-\textbf{Property}                &                             & &                           &                   & \\
-\midrule
-Splitting                        & −                           & + & +                         & + & +                                \\
-Modal meaning                    & −                           & ± & +                         & + & +                                \\
-Past Tense                       & +                           & + & +                         & − & +                                \\
-Person/number marking    & +                           & + & +                         & + & +                                \\
-Infinitive                       & +                           & + & +                         & − & −                                \\
-Thematic subject                 & +                           & + & +                         & − & −                                \\
-Potential                        & +                           & + & +                         & − & −                                \\
-Conditional                      & +                           & + & +                         & − & −                                \\
-Imperative                       & +                           & + & +                         & − & −                                \\
-Person-marked infinitive & −                           & − & −                         & − & −                                \\
-\midrule
-\textbf{Verb}                    & \emph{talál}\newline ‘happen’ & \emph{kell}\newline ‘must’ & \emph{szabad}\newline ‘may’ & \emph{lehet}\newline ‘may’ & \textsc{passive}\newline \emph{van} ‘be’   \\
-\textbf{Property}                &                               &                    &                             &                            &                                   \\
-\midrule
-Splitting                        & +                             & +                  & +                           & +                          &                                   +\\
-Modal meaning                    & −                             & +                  & +                           & +                          &                                   −\\
-Past Tense                       & +                             & +                  & ±                           & +                          &                                   +\\
-Person/number marking    & +                             & −                  & −                           & −                          &                                   +\\
-Infinitive                       & +                             & +                  & −                           & −                          &                                   +\\
-Thematic subject                 & −                             & −                  & −                           & −                          &                                   −\\
-Potential                        & −                             & −                  & −                           & −                          &                                   +\\
-Conditional                      & +                             & +                  & +                           & +                          &                                   +\\
-Imperative                       & −                             & +                  & +                           & +                          &                                   +\\
-Person-marked infinitive & −                             & +                  & +                           & +                          &                                   *\\
+\rotatebox{0}{Verb} & \rotatebox{90}{Splitting} & \rotatebox{90}{Modal meaning} & \rotatebox{90}{Past Tense} & \rotatebox{90}{Person/number marking} & \rotatebox{90}{Infinitive} 
+& \rotatebox{90}{Thematic subject} & \rotatebox{90}{Potential} & \rotatebox{90}{Conditional} & \rotatebox{90}{Imperative} & \rotatebox{90}{Person-marked infinitive}\\\midrule
+\textbf{\emph{utál}} ‘hate’ & − & − & + & + & + & + & + & + & + & −\\
+\textbf{\emph{akar}} ‘want’ & + & ± & + & + & + & + & + & + & + & −\\
+\textbf{\emph{bír}} ‘can’ & + & + & + & + & + & + & + & + & + & −\\
+\emph{fog} ‘will’ & + & + & − & + & − & − & − & − & − & −\\
+\emph{szokott} ‘usually’ & + & + & + & + & − & − & − & − & − & −\\
+\emph{talál} ‘happen’ & + & − & + & + & + & − & − & + & − & − \\
+\emph{kell} ‘must’ & + & + & + & − & + & − & − & + & + & +\\
+\emph{szabad} ‘may’ & + & + & ± & − & − & − & − & + & + & + \\
+\emph{lehet} ‘may’ & + & + & + & − & − & − & − & + & + & +\\
+\textsc{passive} \emph{van} ‘be’ & + & − & + & + & + & − & + & + & + & *\\
 \lspbottomrule
-\end{tabularx}
-}
-\caption{Feature matrix for \ili{Hungarian} verbs and auxiliaries}\label{tab:key:27.3}
+\end{tabular}
+% % % {\smaller
+% % % \begin{tabularx}{\textwidth}{lXXXXX}
+% % % \lsptoprule
+% % % \textbf{Verb}                    & \textbf{\emph{utál}}\newline ‘hate’ & \textbf{\emph{akar}} ‘want’ & \textbf{\emph{bír}}\newline ‘can’ & \emph{fog}\newline ‘will’ & \emph{szokott}\newline ‘usually’ \\
+% % % \textbf{Property}                &   &   &   &   & \\\midrule
+% % % Splitting                        & − & + & + & + & + \\
+% % % Modal meaning                    & − & ± & + & + & + \\
+% % % Past Tense                       & + & + & + & − & + \\
+% % % Person/number marking            & + & + & + & + & + \\
+% % % Infinitive                       & + & + & + & − & − \\
+% % % Thematic subject                 & + & + & + & − & − \\
+% % % Potential                        & + & + & + & − & − \\
+% % % Conditional                      & + & + & + & − & − \\
+% % % Imperative                       & + & + & + & − & − \\
+% % % Person-marked infinitive         & − & − & − & − & − \\\midrule
+% % % \textbf{Verb}                    & \emph{talál}\newline ‘happen’ & \emph{kell}\newline ‘must’ & \emph{szabad}\newline ‘may’ & \emph{lehet}\newline ‘may’ & \textsc{passive}\newline \emph{van} ‘be’   \\
+% % % \textbf{Property}                &   &   &   &   &   \\\midrule
+% % % Splitting                        & + & + & + & + & + \\
+% % % Modal meaning                    & − & + & + & + & − \\
+% % % Past Tense                       & + & + & ± & + & + \\
+% % % Person/number marking            & + & − & − & − & + \\
+% % % Infinitive                       & + & + & − & − & + \\
+% % % Thematic subject                 & − & − & − & − & − \\
+% % % Potential                        & − & − & − & − & + \\
+% % % Conditional                      & + & + & + & + & + \\
+% % % Imperative                       & − & + & + & + & + \\
+% % % Person-marked infinitive         & − & + & + & + & * \\
+% % % \lspbottomrule
+% % % \end{tabularx}
+% % % }
+\caption{Feature matrix for \ili{Hungarian} verbs and auxiliaries}\label{tab:27.3}
 \end{table}
 
-\largerpage{}
 Starting with the fourth column there are only \enquote{classes} containing single
 items, and it is precisely these words that qualify as auxiliaries, which
-points at property \REF{ex:key:27.7} as the one distinguishing them from main
+points at property \REF{ex:27.7} as the one distinguishing them from main
 verbs, or more precisely, main verbs that take infinitival clauses as
 complements.\footnote{See \citet{Kenesei2006} for a full set of arguments.}
 Note, however, that the lack of a thematic subject/external argument is a
 property found also in unaccusative verbs, but they, in turn, do not take
-infinitival complements, and \tabref{tab:key:27.3} was set up to include verbs
+infinitival complements, and \tabref{tab:27.3} was set up to include verbs
 with infinitival complements only. Again, it is another instance of
 cross-classification, as is generally the case with the open class of (main)
 verbs, but the ultimate lesson is that the word class of auxiliaries does not
 seem to emerge, because the rest of the features are not shared by any two of
-the items listed in \tabref{tab:key:27.3}.
+the items listed in \tabref{tab:27.3}.
 
 \section{Conclusion: Life without word classes}
 
