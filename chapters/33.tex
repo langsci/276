@@ -6,12 +6,12 @@
 % \chapterDOI{} %will be filled in at production
 
 \abstract{We investigate structural properties of two set-theoretic models of
-    \isi{phrase structure}, namely the Phrase Markers of LSLT and Bare Phrase
-    Structure. We demonstrate that neither set-theoretic model has a nice
+    \isi{phrase structure}, namely the phrase markers of LSLT and bare phrase
+    structure. We demonstrate that neither set-theoretic model has a nice
     notion of “substructure” which is well-behaved with respect to the
-Extension Condition. We compare these with graph- and order-theoretic
+extension condition. We compare these with graph- and order-theoretic
 representations which have well-behaved structure-preserving maps for
-characterizing both the Extension Condition and the operation \isi{Agree}.}
+characterizing both the extension condition and the operation \isi{Agree}.}
 
 \maketitle
 
@@ -21,9 +21,9 @@ characterizing both the Extension Condition and the operation \isi{Agree}.}
 
 We review two models of \isi{phrase structure} in Generative Grammar and survey their
 structural properties with respect to substructures and isomorphism\is{isomorphism}. We
-especially look at how these structural notions bear on the Extension
-Condition. Specifically, we show that neither formal representation captures a
-sufficiently general form of the Extension Condition, while the correct
+especially look at how these structural notions bear on the extension
+condition. Specifically, we show that neither formal representation captures a
+sufficiently general form of the extension condition, while the correct
 properties are captured straightforwardly both by graph- and order-theoretic
 representations.
 
@@ -40,90 +40,90 @@ We discuss substructures and isomorphism\is{isomorphism} somewhat informally, th
 of them discussed can be made precise in the language of model theory or
 category theory.
 
-\section{Phrase Markers and Reduced Phrase Markers}
+\section{Phrase markers and reduced phrase markers}
 
 \citet{conceptions} briefly points out an issue that arises with respect to the
 \gls{EC}, the Minimalist version of the principle of the cycle proposed by
-\cite{Chomsky1993}, or, more precisely, the deduction of it by
-\cite{Chomsky2000}. \textcite[22]{Chomsky1993} formulated \gls{EC}\is{Extension
-Condition} as follows:
+\citet{Chomsky1993}, or, more precisely, the deduction of it by
+\citet{Chomsky2000}. \textcite[22]{Chomsky1993} formulated \gls{EC}\is{extension
+condition} as follows:
 
-\ea\label{ex:key:33.1} GT [Generalized
-    Transformation] and Move $\alpha$ extend K to K$'$ which includes K
+\ea\label{ex:33.1} GT [generalized
+    transformation] and Move $\alpha$ extend K to K$'$ which includes K
     as a proper part.
 \z
 
-The \textcite{Chomsky2000} rationale for \gls{EC}\is{Extension Condition} is that derivations conform to a
+The \textcite{Chomsky2000} rationale for \gls{EC}\is{extension condition} is that derivations conform to a
 condition demanding that there be no tampering by a transformation with already
 existing structure. If an item is newly attached at the \enquote{top} of a tree, the
 former tree is assumed to be completely preserved as a sub-tree by external
 merge, and also by internal merge\is{Merge} on the \isi{copy theory of
 movement}. Here's a
-simplified toy illustration. Start with the tree in \eqref{ex:key:33.2}.
+simplified toy illustration. Start with the tree in \eqref{ex:33.2}.
 
-\ea\label{ex:key:33.2}\begin{tikzpicture}[baseline=(root.base)]
+\begin{multicols}{2}
+\ea\label{ex:33.2}\begin{tikzpicture}[baseline=(root.base)]
         \Tree [.\node(root){XP}; [.X ] [.YP [.Y ] [.ZP [.Z ] ] ] ]
     \end{tikzpicture}
-\z
-
-Now suppose $\beta$ is adjoined\is{adjunction} to XP in accord with
-\eqref{ex:key:33.1}. The resulting tree is \eqref{ex:key:33.3}, which clearly
-includes \eqref{ex:key:33.2} as a sub-tree, the intended consequence.
-
-\ea\label{ex:key:33.3}\begin{tikzpicture}[baseline=(root.base)]
+\ex\label{ex:33.3}\begin{tikzpicture}[baseline=(root.base)]
     \Tree [.\node(root){XP}; [.$\beta$ ] [.XP [.X ] [.YP [.Y ] [.ZP [.Z ] ] ] ] ]
 \end{tikzpicture}
 \z
+\end{multicols}
+
+Now suppose $\beta$ is adjoined\is{adjunction} to XP in accord with
+\eqref{ex:33.1}. The resulting tree is \eqref{ex:33.3}, which clearly
+includes \eqref{ex:33.2} as a sub-tree, the intended consequence.
 
 But now consider these structures in terms of their set-theoretic
 representations, for example, as in LSLT \parencite{Chomsky1955}. The picture
-in \eqref{ex:key:33.2} stands for the actual object in \eqref{ex:key:33.4}, a
-set of strings:
+in \eqref{ex:33.2} stands for the actual object in \eqref{ex:33.4}, a
+set of strings:\largerpage
 
-\ea\label{ex:key:33.4}$\{\text{XP, X YP, X Y ZP, X Y Z}\}$
+\ea\label{ex:33.4}$\{\text{XP, X YP, X Y ZP, X Y Z}\}$
 \z
 
-And the picture in \eqref{ex:key:33.3} stands for the actual derived object in
-\eqref{ex:key:33.5}:
+\noindent And the picture in \eqref{ex:33.3} stands for the actual derived object in
+\eqref{ex:33.5}:
 
-\ea\label{ex:key:33.5}\{\text{XP, $\beta$ XP, $\beta$ X YP, $\beta$ X Y ZP, $\beta$ X Y Z}\}
+\ea\label{ex:33.5}\{\text{XP, $\beta$ XP, $\beta$ X YP, $\beta$ X Y ZP, $\beta$ X Y Z}\}
 \z
 
-Notice that \eqref{ex:key:33.4} is in no respect a sub-object, i.e., a subset, of \eqref{ex:key:33.5}. And this
+Notice that \eqref{ex:33.4} is in no respect a sub-object, i.e., a subset, of \eqref{ex:33.5}. And this
 is not because of any special property of the example chosen. It is invariably
 true that if we adjoin something to the \enquote{top} of an
-LSLT\nocite{Chomsky1955}-style \gls{PM}\is{phrase marker}, the resulting set is never a superset
+LSLT-style \gls{PM}\is{phrase marker}, the resulting set is never a superset
 of the original. That is, we have dramatically \enquote{tampered} with the original
 set: It is gone.
 
 It is important to realize that the same conclusion follows on any \enquote{purely} set
 theoretic implementation of syntactic theory. One other such implementation is
-that of \cite{lk}. In that framework as in that of LSLT\nocite{Chomsky1955}, a
+that of \citet{lk}. In that framework as in that of LSLT, a
 \gls{PM} is a set of strings. The difference is that for L\&K the \gls{PM}\is{phrase marker} consists
 entirely of the terminal string and \enquote{monostrings} (strings comprised of exactly
 one non-terminal symbol surrounded by any number of terminal symbols). L\&K
 called their \glspl{PM} \glspl{RPM}. To see that the same conclusion outlined
 above happens with \glspl{RPM}, we need to slightly complicate the example
 discussed, since there, it turns out that the \gls{PM}\is{phrase marker} and \gls{RPM}\is{reduced phrase marker} are the
-same. So consider the slightly more complex tree in \eqref{ex:key:33.6}:
+same. So consider the slightly more complex tree in \eqref{ex:33.6}:
 
-\ea\label{ex:key:33.6}\begin{tikzpicture}[baseline=(root.base)]
+\ea\label{ex:33.6}\begin{tikzpicture}[baseline=(root.base)]
         \Tree [.\node(root){XP}; [.$\beta$ ] [.XP [.X ] [.YP [.Y ] [.ZP [.WP [.QP [.Q ] ] [.W ] ] [.Z$'$ [.Z ] ] ] ] ] ]
     \end{tikzpicture}
 \z
 
-The initial \gls{RPM}\is{reduced phrase marker} is \eqref{ex:key:33.10}:
+\noindent The initial \gls{RPM}\is{reduced phrase marker} is \eqref{ex:33.10}:
 
-\ea\label{ex:key:33.10}$\{\text{XP, X YP, X Y ZP, X Y WP Z, X Y QP W Z, X Y Q W Z$'$, X Y Q Z}\}$
+\ea\label{ex:33.10}$\{\text{XP, X YP, X Y ZP, X Y WP Z, X Y QP W Z, X Y Q W Z$'$, X Y Q Z}\}$
 \z
 
-And the derived \gls{RPM}\is{reduced phrase marker} is \eqref{ex:key:33.11}:
+\noindent And the derived \gls{RPM}\is{reduced phrase marker} is \eqref{ex:33.11}:
 
-\ea\label{ex:key:33.11}$\{$XP, $\beta$ XP, $\beta$ X YP, $\beta$ X Y ZP, $\beta$ X Y WP Z, $\beta$ X Y QP W Z, $\beta$ X Y Q W Z$'$, \\$\beta$ X Y Q W Z$\}$
+\ea\label{ex:33.11}$\{$XP, $\beta$ XP, $\beta$ X YP, $\beta$ X Y ZP, $\beta$ X Y WP Z, $\beta$ X Y QP W Z, $\beta$ X Y Q W Z$'$, \\$\beta$ X Y Q W Z$\}$
 \z
 
 Once again, the initial set is not a subset of the derived set. In fact, as
-with the LSLT\nocite{Chomsky1955} \glspl{PM}, there is no obvious simple
+with the LSLT \glspl{PM}, there is no obvious simple
 set-theoretic relation at all between them.
 
 This is a special case of a more pervasive limitation of such purely
@@ -133,45 +133,45 @@ template for a specifier.
 
 Surprisingly, attaching at the very \enquote{bottom} does yield a superset of the
 initial set, the exact opposite of the evidently desired result. We illustrate
-this beginning with the simple structure in \eqref{ex:key:33.2}, repeated here, followed by the
+this beginning with the simple structure in \eqref{ex:33.2}, repeated here, followed by the
 \gls{RPM} (which, as noted earlier, is identical to the
-LSLT\nocite{Chomsky1955} \gls{PM}\is{phrase marker} in this case):
+LSLT \gls{PM}\is{phrase marker} in this case):
 
-\ea\label{ex:key:33.12}\begin{tikzpicture}[baseline=(root.base)]
+\ea\label{ex:33.12}\begin{tikzpicture}[baseline=(root.base)]
     \Tree [.\node(root){XP}; [.X ] [.YP [.Y ] [.ZP [.Z ] ] ] ]
 \end{tikzpicture}
 \z
 
-\ea\label{ex:key:33.13}$\{\text{XP, X YP, X Y ZP, X Y Z}\}$
+\ea\label{ex:33.13}$\{\text{XP, X YP, X Y ZP, X Y Z}\}$
 \z
 
-This time, adjoin $\beta$ at the bottom, in extreme violation of \gls{EC}:
+\noindent This time, adjoin $\beta$ at the bottom, in extreme violation of \gls{EC}:
 
-\ea\label{ex:key:33.14}\begin{tikzpicture}[baseline=(root.base)]
+\ea\label{ex:33.14}\begin{tikzpicture}[baseline=(root.base)]
         \Tree [.\node(root){XP}; [.X ] [.YP [.Y ] [.ZP [.Z [.$\beta$ ] [.Z ] ] ] ] ]
     \end{tikzpicture}
 \z
 
-The new set is \eqref{ex:key:33.15}:
+\noindent The new set is \eqref{ex:33.15}:
 
-\ea\label{ex:key:33.15} $\{\text{XP, X YP, X Y ZP, X Y Z, X Y $\beta$ Z}\}$
+\ea\label{ex:33.15} $\{\text{XP, X YP, X Y ZP, X Y Z, X Y $\beta$ Z}\}$
 \z
 
 But surprisingly this time the original object is not tampered with as
-\eqref{ex:key:33.13} $\subset$ \eqref{ex:key:33.15}. It is safe to conclude,
-then, that if Chomsky's deduction of \gls{EC}\is{Extension Condition} is to be maintained, neither
+\eqref{ex:33.13} $\subset$ \eqref{ex:33.15}. It is safe to conclude,
+then, that if Chomsky's deduction of \gls{EC}\is{extension condition} is to be maintained, neither
 classic set-theoretic formalization of \isi{phrase structure} is appropriate.
 
 In summary, while producing the \enquote{wrong} result, \glspl{RPM} have a
-well-defined notion of substructure. For example, $\eqref{ex:key:33.13}\subset
-\eqref{ex:key:33.15}$ is a subset relation, and the defining relations of an
+well-defined notion of substructure. For example, $\eqref{ex:33.13}\subset
+\eqref{ex:33.15}$ is a subset relation, and the defining relations of an
 \gls{RPM} -- precedence and dominance -- are \enquote{preserved} by this
 inclusion (for example, the monostring X YP dominates the monostring X Y ZP in
-\eqref{ex:key:33.13}, as does the corresponding monostring in
-\eqref{ex:key:33.15}).
+\eqref{ex:33.13}, as does the corresponding monostring in
+\eqref{ex:33.15}).
 
 There is also a clear notion of \emph{isomorphism} between R\glspl{PM}, which
-will be important in §2.2. Roughly, if $N$ and $M$ are two sets of nonterminals
+will be important in \sectref{sec:33.2.2}.\todo{There's no Section §2.2!} Roughly, if $N$ and $M$ are two sets of nonterminals
 and $T$ and $S$ sets of terminals, a pair of bijections $f: N\rightarrow M$ and
 $g:T\rightarrow S$ extends to a bijection between sets of strings $(f+g)^*:
 (N\cup T)^*\rightarrow (M\cup S)^*$ (replacing each nonterminal symbol $A$ in a
@@ -190,51 +190,51 @@ exactly when the corresponding monostrings in $G$ are.
 \subsection{Extensive operations}
 
 Before proceeding, we note in passing that it is not only the case that in the
-LSLT\nocite{Chomsky1955} model, attachment at the top does not `preserve
-structure', but also that attachment at the top is literally impossible, at
+LSLT model, attachment at the top does not ``preserve
+structure'', but also that attachment at the top is literally impossible, at
 least for a transformation.  Transformations in that framework consist of a
 \gls{SA} and a \gls{SC2} (\glsdesc{SC2}). The former determines whether the T
 is applicable to a particular \gls{PM}\is{phrase marker}, while the latter
 indicates the operation to be performed.  An \gls{SA} is a sequence of
 ``terms'', each term a (string) variable, a constant (i.e., a syntactic
 symbol), or a linear combination of any of the preceding.  Consider Chomsky's
-Auxiliary Transformation ``Affix Hopping'' as presented by
+auxiliary transformation ``affix hopping'' as presented by
 \textcite{Chomsky1957}. The following is one of a family of 20 \glspl{SA}
-embodied by the T:
+embodied by the T:\largerpage[2]
 
-\ea\label{ex:key:33.16}X -- \emph{past} -- V -- Y
+\ea\label{ex:33.16}X -- \emph{past} -- V -- Y
 \z
 
 Applicability is determined by comparing the \gls{SA} with the members of the
 set to establish satisfaction. Any string satisfies a variable, while a
 constant is satisfied only by that very symbol. The T with \gls{SA} in
-\eqref{ex:key:33.16} is applicable to the \gls{PM}\is{phrase marker} pictorially represented in
-\eqref{ex:key:33.17}.
+\eqref{ex:33.16} is applicable to the \gls{PM}\is{phrase marker} pictorially represented in
+\eqref{ex:33.17}.
 
-\ea\label{ex:key:33.17}\begin{tikzpicture}[baseline=(root.base)]
+\ea\label{ex:33.17}\begin{tikzpicture}[baseline=(root.base)]
     \Tree [.\node(root){S}; [.NP [.NP\tss{sing} [.John ] ] ] [.VP [.Verb [.Aux [.C [.past ] ] ] [.V [.walk ] ] ] ] ]
 \end{tikzpicture}
 \z
 
-The \gls{PM}\is{phrase marker} is in \eqref{ex:key:33.18}.
+\noindent The \gls{PM}\is{phrase marker} is in \eqref{ex:33.18}.
 
-\ea\label{ex:key:33.18}$\{$S, NP VP, NP Verb, NP Aux V, NP Aux walk, NP C V, NP C walk, NP past V, NP past walk, NP\tss{sing} VP, NP\tss{sing} Verb, NP\tss{sing} Aux V, NP\tss{sing} Aux walk, NP\tss{sing} C V, NP\tss{sing} C walk, NP\tss{sing} past V, NP\tss{sing} past walk, John VP, John Verb, John Aux V, John Aux walk, John C V, John C walk, John past V, John past walk$\}$
+\ea\small\label{ex:33.18}$\{$S, NP VP, NP Verb, NP Aux V, NP Aux walk, NP C V, NP C walk, NP past V, NP past walk, NP\tss{sing} VP, NP\tss{sing} Verb, NP\tss{sing} Aux V, NP\tss{sing} Aux walk, NP\tss{sing} C V, NP\tss{sing} C walk, NP\tss{sing} past V, NP\tss{sing} past walk, John VP, John Verb, John Aux V, John Aux walk, John C V, John C walk, John past V, John past walk$\}$
 \z
 
 In this case, applicability of the transformation is established by any of 3
 members of the set:
 
-\ea\label{ex:key:33.19}NP past V\hspace{5mm} NP\tss{sing} past V\hspace{5mm} John past V
+\ea\label{ex:33.19}NP past V\hspace{5mm} NP\tss{sing} past V\hspace{5mm} John past V
 \z
 
 Notice that every member of any \gls{PM}\is{phrase marker} has symbols in a linear order; every
 pair of symbols in a member are in the precedence relation. Thus, the symbols
 in any \gls{SA} are likewise necessarily in a linear order. Thus, a symbol can
-adjoin to one that follows it (as in Affix Hopping, where past will adjoin to
+adjoin to one that follows it (as in affix hopping, where past will adjoin to
 V), or to one that precedes it. The result of the operation is in
-\eqref{ex:key:33.20}.
+\eqref{ex:33.20}.\largerpage[2]
 
-\ea\label{ex:key:33.20}\begin{tikzpicture}[baseline=(root.base)]
+\ea\label{ex:33.20}\begin{tikzpicture}[baseline=(root.base)]
         \Tree [.\node(root){S}; [.NP [.NP\tss{sing} [.John ] ] ]
 [.VP [.Verb [.Aux [.C ] ] [.V [.V [.walk ] ] [.past ] ] ] ] ]
 \end{tikzpicture}
@@ -243,33 +243,33 @@ V), or to one that precedes it. The result of the operation is in
 An operation that would adjoin a symbol to a dominating symbol is literally
 unstatable. But any singulary \isi{movement} T satisfying the \glsdesc{EC} would have
 to do exactly this. Suppose, for example, we wanted to apply a C fronting type
-operation (something like Chomsky's T$_\text{q}$) to \eqref{ex:key:33.17}, but
+operation (something like Chomsky's T$_\text{q}$) to \eqref{ex:33.17}, but
 which would left-adjoin C to S (in accord with \gls{EC}), as pictured in
-\eqref{ex:key:33.21}:
+\eqref{ex:33.21}:
 
-\ea\label{ex:key:33.21}\begin{tikzpicture}[baseline=(root.base)]
+\ea\label{ex:33.21}\begin{tikzpicture}[baseline=(root.base)]
     \Tree [.\node(root){S}; [.C [.past ] ] [.S [.NP [.NP\tss{sing} [.John ] ] ] [.VP [.Verb [.Aux ] [.V [.walk ] ] ] ] ] ]
     \end{tikzpicture}
 \z
 
-In the LSLT\nocite{Chomsky1955} formalism C and S would both have to be
+In the LSLT formalism C and S would both have to be
 mentioned in the \gls{SA}. So perhaps the \gls{SA} could be
-(\ref{ex:key:33.22}a) or (\ref{ex:key:33.22}b):
+(\ref{ex:33.22}a) or (\ref{ex:33.22}b):
 
-\ea\label{ex:key:33.22}
+\ea\label{ex:33.22}
     \ea X--S--C--Y
     \ex X--C--S--Y
     \z
 \z
 
-But now look again at the \gls{PM}\is{phrase marker} \eqref{ex:key:33.18} to
-which we would want to apply \eqref{ex:key:33.22}.  There is no member of that
+But now look again at the \gls{PM}\is{phrase marker} \eqref{ex:33.18} to
+which we would want to apply \eqref{ex:33.22}.  There is no member of that
 set that contains both S and C, so the transformation could never apply. This
 example is completely representative. No \isi{movement} transformation in the
-LSLT\nocite{Chomsky1955} framework would ever be able to apply in accord with
+LSLT framework would ever be able to apply in accord with
 \gls{EC}.\footnote{As a reviewer observes, older formulations of the cyclic
-    constraint, as in \cite{Chomsky1965} or the Strict Cycle Condition of
-\cite{Chomsky1973}, do not run into this difficulty, since they only required
+    constraint, as in \citet{Chomsky1965} or the strict cycle condition of
+\citet{Chomsky1973}, do not run into this difficulty, since they only required
 operations to target topmost domains, and not the root per se.}
 
 Interestingly, the L\&K framework also forbids EC-satisfying operations, but
@@ -286,27 +286,27 @@ of monostrings not in the precedence relation, and hence in the dominance
 relation, to qualify. And this, of course, would allow EC-satisfying
 operations.
 
-\section{Bare Phrase Structure}
+\section{Bare phrase structure}
 
-\glsunset{BPS}\glsdesc{BPS} (\gls{BPS}, \citealt{ColSta2016}
-(C\&S\nocite{ColSta2016}), \citealt{Chomsky2000,fukui2011merge}) takes an
+Bare phrase structure (\glsunset{BPS}\gls{BPS}, \citealt{ColSta2016}
+(C\&S); \citealt{Chomsky2000,fukui2011merge}) takes an
 alternative approach to phrase-markers. \gls{BPS}\is{bare phrase structure} uses the set-theoretic
 $\in$-relation to describe constituency. We fix the instantiation of \gls{BPS}
-described in \cite{Chomsky2000} and \cite{Chomsky2008} and formalized in
-C\&S\nocite{ColSta2016}.
+described in \citet{Chomsky2000,Chomsky2008} and formalized in
+C\&S.
 
 In these models, \textsc{merge} is a structure-building operations which takes
-two objects $A$ and $B$ and forms $\{A,B\}$.\footnote{C\&S\nocite{ColSta2016},
+two objects $A$ and $B$ and forms $\{A,B\}$.\footnote{C\&S,
 Def.\ 13.} From this definition, we can recover an ``immediately contains''
 relation between the objects $A$ and $B$ and $\{A,B\}$ by using the elementhood
 relation.  Explicitly, we say that $X$ is \emph{immediately contained} in $Y$
-if and only if $X\in Y$.\footnote{C\&S\nocite{ColSta2016}, Def.\ 8.} General
+if and only if $X\in Y$.\footnote{C\&S, Def.\ 8.} General
 \emph{containment} is defined as the transitive closure of this relation.
 Explicitly, we can inductively define containment by saying that $X$ is
 contained in $Y$ if $X\in Y$ or $X\in Z$ for some $Z$ contained in $Y$.
 
 Strictly speaking, this is a relation which is defined on the entire model of
-the ambient set-theory, not on a single set $X$ which represents a single
+the ambient set theory, not on a single set $X$ which represents a single
 syntactic object, as in the case of the precedence and dominance relations
 between elements of an \gls{RPM}\is{reduced phrase marker}. That is,
 containment is a relation between sets in the entire class of sets, not between
@@ -318,14 +318,14 @@ theory.\footnote{\citet{chang1990model}.}
 It is straightforward to show that constituents are not in general subsets of a
 \gls{BPS} syntactic object $X$.
 
-\ea\label{ex:key:33.23}Let $A$, $B$, $C$, and $D$ be lexical items or complex
+\ea\label{ex:33.23}Let $A$, $B$, $C$, and $D$ be lexical items or complex
 syntactic objects.\\
     Construct
     $X=\textsc{merge}(A,\textsc{merge}(B,\textsc{merge}(C,D)))=\{A,\{B,\{C,D\}\}\}$.
     Then, $\{C,D\}$ is contained in $X$, but $\{C,D\}\not\subset X$.
 \z
 
-As syntactic objects $X$ are also not models of set-theory, but rather the
+As syntactic objects $X$ are also not models of set theory, but rather the
 elements of such a model, the submodel relationship which preserves the $\in$
 relation also cannot be the correct notion of substructure for syntactic
 objects.
@@ -344,20 +344,21 @@ slightly relaxed notions of substructures, $\in$ is clearly behaving as a
 primitive containment relation between nodes, and not a substructure inclusion.
 We turn to some motivating examples.
 
-In C\&S\nocite{ColSta2016}, lexical items are treated as a triple of sets of
+In C\&S, lexical items are treated as a triple of sets of
 features (\textsc{sem}, \textsc{syn}, and \textsc{phon}).  The features of a
 syntactic object $X$ are formalized externally with a \textsc{triggers}
-function. C\&S\nocite{ColSta2016} keep track of which features have been
+function. C\&S keep track of which features have been
 satisfied by removing elements from the sets of features associated to $X$ via
-\textsc{trigger}. Chomsky suggests in Categories \& Transformations (CT) that
+\textsc{trigger}. Chomsky suggests in \emph{Categories and transformations} (CT, 
+\citeyear[Chapter 4]{Chomsky1995}) that
 certain formal features may be \emph{erased} upon satisfaction, or at the
-interfaces.\footnote{\cite[280]{Chomsky1995}: \enquote{Erasure is a `stronger
+interfaces.\footnote{\citet[280]{Chomsky1995}: \enquote{Erasure is a `stronger
 form' of deletion, eliminating the element entirely so that it is inaccessible
 to any operation, not just to interpretability at \gls{LF}.}} We first look at how
-C\&S\nocite{ColSta2016} formalize their calculus of features.
-C\&S\nocite{ColSta2016}'s feature calculus is meant to capture this intuition.
+C\&S formalize their calculus of features.
+C\&S's feature calculus is meant to capture this intuition.
 
-\ea\label{ex:key:33.24}(C\&S\nocite{ColSta2016} Def.\ 26) \textsc{triggers} is any
+\ea\label{ex:33.24}(C\&S Def.\ 26) \textsc{triggers} is any
 function from each syntactic object $A$ to a subset of the trigger features of
 A, meeting the following conditions:
     \begin{xlisti}
@@ -378,7 +379,7 @@ A, meeting the following conditions:
 
 This goes hand in hand with their definition of triggered merge\is{Merge}.
 
-\ea\label{ex:key:33.22b}(C\&S\nocite{ColSta2016} Def.\ 27) Given any syntactic
+\ea\label{ex:33.22b}(C\&S Def.\ 27) Given any syntactic
 objects $A$, $B$, where \textsc{triggers}($A)\neq \{\}$ and
 \textsc{triggers}($B)=\{\}$, \textsc{merge}$(A,B)=\{A,B\}$.  \z
 
@@ -400,7 +401,7 @@ object which the $\in$ relation and its transitive closure both fail to treat
 as related to the original object in any straightforward way. We will extend
 the argument to cases of \textsc{agree}.
 
-\subsection{Method one: removal of the feature}
+\subsection{Method one: Removal of the feature}
 
 For any sets $A$ and $B$, we can construct a set $A-B=\{a\in A:a\not\in B\}$,
 their \emph{difference}, which removes $B$-elements from $A$.
@@ -419,7 +420,7 @@ $\{X,\{A-\{f\},Y\}\}$, which should be a substructure of $\{X,\{A,Y\}\}$.
 In the first case, we should like to describe in what sense $\{A-\{f\},Y\}$ is
 a substructure of $\{A,Y\}$ in that they have the same \isi{phrase structure},
 with the former simply missing a feature of the latter, so that we can state a
-form of the \gls{EC}\is{Extension Condition}. In the second case, we should
+form of the \gls{EC}\is{extension condition}. In the second case, we should
 like to describe how $\{X,\{A-\{f\},Y\}\}$ is a substructure of
 $\{X,\{A,Y\}\}$.
 
@@ -439,9 +440,9 @@ On the other hand, there are canonical ways to draw graph-theoretic objects
 from well-founded sets. One method produces trees: draw a set $X$ as a root,
 and write all of its elements as immediate daughters. We repeat the process at
 each child, writing the same element multiple times if necessary. This process
-is described in \cite{aczel}.
+is described in \citet{aczel}.
 
-\ea\label{ex:key:aczel}
+\ea\label{ex:aczel}
     \hspace*{-.75cm}\begin{tikzpicture}[baseline=(root.base)]
     \Tree   [.\node(root){$\{X,\{A,Y\}\}$};
                 [.$X$ \edge [roof]; {elements contained in $X$} ]
@@ -463,18 +464,18 @@ A \emph{graph} can be defined as a set $X$ together with a relation $R\subset
 X\times X$. For syntactic objects $K$, we can define a set $X$ of occurrences
 of contained elements, with $R\subset X\times X$ being the immediate
 containment relation between the appropriate occurrences; see
-C\&S\nocite{ColSta2016}, \S 4, Def.\ 18 for a formal treatment.
+C\&S (\S 4, Def.\ 18) for a formal treatment.
 
 We can define a \emph{subgraph} relation between two graphs $(X,R)$ and $(Y,S)$
 if $X\subset Y$ and we have a relation $xRx'$ for $x,x'\in X$ if
 and only if $xSx'$ in $Y$. We can then form the graph-theoretic tree
 associated to $\{X,\{A-\{f\},Y\}\}$, which is clearly a subgraph of the graph
-in \REF{ex:key:aczel}. We could similarly use the containment relation in
+in \REF{ex:aczel}. We could similarly use the containment relation in
 place of the immediate containment relation, which would describe the syntactic
 objects as partially ordered sets, with the substructure relation being a
 subspace inclusion of finite partial orders.
 
-\subsection{Method two: changing (the value of) a feature}
+\subsection{Method two: Changing (the value of) a feature}
 
 Changing the \enquote{value} or otherwise adding diacritical marks to an element is
 another way to formally represent the status of a feature in a syntactic
@@ -508,7 +509,7 @@ they have the same number of nodes with the same constituency
 relations.\footnote{Though, this ignores the \enquote{occurrence} relations which
     indicate which nodes are \enquote{copies} of others. On the other hand, the
 multidominant picture of a tree, called the \emph{canonical picture} in
-\cite{aczel}, and given in Fig. 3 in C\&S\nocite{ColSta2016}, would not have
+\citet{aczel}, and given in Fig. 3 in C\&S, would not have
 this issue, and could be used instead.} Using this definition, the graphs
 associated to $\{A,Y\}$ and $\{A',Y\}$ will be isomorphic, such that $\{A,Y\}$
 is isomorphic to a subgraph of $\{X,\{A',Y\}\}$ in the appropriate way.
@@ -527,35 +528,35 @@ would be a homomorphism.
 
 \subsection{Agree}
 
-The above examples showed that the feature-deletion and feature-valuation
+The above examples showed that the feature-deletion and feature-valuation\linebreak
 methods of modeling \textsc{merge} do not lead to substructure embeddings or
 homomorphisms between \gls{BPS}\is{bare phrase structure} sets in any obvious sense.  In contrast,
 relations between derived syntactic objects are straightforward when
 represented as graphs (possibly with extra structure).
-\cite{chomsky1999derivation} has a \enquote{valuation} version of \isi{agreement}, which is
+\citet{chomsky1999derivation} has a \enquote{valuation} version of \isi{agreement}, which is
 subject to similar analysis as the valuation case for selection above. We look
 now at a feature-sharing approach to \isi{agreement}, and similarly show that the
 structural relation between the input structures and output structures is given
 straightforwardly by graph homomorphisms, while there is no clear associated
 notion for sets.
 
-\cite{frampton2000agreement} give an explicit architecture for \isi{agreement} as
-feature-sharing using the set-theoretic structure of \gls{BPS}\is{bare phrase structure}.
+\citet{frampton2000agreement} give an explicit architecture for \isi{agreement} as
+feature-sharing using the set-theoretic structure of \gls{BPS}\is{bare phrase structure}:
 
-\blockquote[{\citealt{frampton2000agreement}}]{Consider [\eqref{ex:key:33.25}]
+\blockquote[{\citealt{frampton2000agreement}}]{Consider [\eqref{ex:33.25}]
     and suppose that \isi{Agree} applies to the pair of nodes.
 
 {\small
-\ea\label{ex:key:33.25}$\{$Num${}_1$, Case${}_2$, \ldots$\}$,
+\ea\label{ex:33.25}$\{$Num${}_1$, Case${}_2$, \ldots$\}$,
 $\{$Per${}_3$, Num${}_4$, Case${}_5$,\dots$\}$
 \z}
 
 [\ldots] suppose that \isi{Agree} induces feature sharing, so that matching features
 coalesce into a single shared feature, which is valued if either of the
-coalescing features is valued. So [\eqref{ex:key:33.25}] produces:
+coalescing features is valued. So [\eqref{ex:33.25}] produces:
 
 {\small
-\ea\label{ex:key:33.26}$\{$Num${}_6$, Case${}_7$, \ldots$\}$,
+\ea\label{ex:33.26}$\{$Num${}_6$, Case${}_7$, \ldots$\}$,
 $\{$Per${}_3$, Num${}_6$, Case${}_7$,\dots$\}$
 \z}
 
@@ -568,10 +569,10 @@ that it is suitably distinguished.
 If the two coalescing features are both valued to start with, it is not clear
 that the result is coherent. But this will never arise, because \isi{Agree} is driven
 by an unvalued feature. A picture will make the idea clearer. \isi{Agree} takes
-[(\ref{ex:key:33.27}a)] into [(\ref{ex:key:33.27}b)], assuming that none of the
+[(\ref{ex:33.27}a)] into [(\ref{ex:33.27}b)], assuming that none of the
 features indicated by the \isi{ellipsis} marks match.
 
-\ea\label{ex:key:33.27} a.\hspace{6.25cm}b.
+\ea\label{ex:33.27} a.\hspace{6.25cm}b.
     \begin{tikzpicture}[baseline=(a.base), font=\smaller, sibling distance=-2pt]
 
         \Tree 	[.\node(a){A};
@@ -647,17 +648,17 @@ elegant: the righthand side above is determined up to isomorphism of graphs
 
 \section{The extension condition in the theory of phrase structure}
 
-Using LSLT\nocite{Chomsky1955} phrase markers\is{phrase marker}, constituents
+Using LSLT phrase markers\is{phrase marker}, constituents
 do not arise as substructures in any straightforward way. Accordingly, even if
-we allow operations which have the effect of the \gls{EC}\is{Extension
-Condition}, it will not be strictly true that the inputs to the operation are
+we allow operations which have the effect of the \gls{EC}\is{extension
+condition}, it will not be strictly true that the inputs to the operation are
 substructures of the output.
 
 In \gls{BPS}\is{bare phrase structure}, if we represent feature-changes at all
 in syntactic objects, either by means of deletion or alteration, it is no
 longer straightforward in what sense the inputs to \textsc{merge} are
-substructures of or are contained in the output.  C\&S\nocite{ColSta2016} and
-\cite{Chomsky2000} only avoid this problem by not annotating the
+substructures of or are contained in the output.  C\&S and
+\citet{Chomsky2000} only avoid this problem by not annotating the
 \enquote{feature-updates} in the syntactic objects themselves, the former by
 keeping track of the features in \enquote{scoreboard} sets external to the
 syntactic object (though relevant to determining properties of it, such as
@@ -669,20 +670,20 @@ the syntax, then the input $\{A,Y\}$ to \textsc{merge} will not be a
 substructure of the output $\{X,\{A',X\}\}$ or immediately contained in it.
 Similarly, no substructure of $\{A,Y\}$ will be contained in
 $\{X,\{A-\{f\},Y\}\}$ if the first method is used in syntax. Both lead to
-complications in stating the Extension Condition for \gls{BPS}\is{bare phrase structure}.
+complications in stating the extension condition for \gls{BPS}\is{bare phrase structure}.
 
 However, \gls{BPS}\is{bare phrase structure} sets can be viewed as an \enquote{encoding} of graphs or partial
 orders using some canonical translation of them. These graphs essentially arise
 from constructing a set of elements contained in a syntactic object $X$
 (possibly with occurrences), and restricting the $\in$ relation between sets to
-this set.  In C\&S\nocite{ColSta2016}, many of the important structural
+this set.  In C\&S, many of the important structural
 properties of syntactic objects -- e.g.\ c-command, relative minimality and
 maximality (of projections), and specifiers -- are similarly defined not on a
 syntactic object $X$ itself but the associated graph of occurrences of elements
 contained in $X$, using a relation based on $\in$ as its ``edge relation''.
 Accordingly, the graph- and order-theoretic representation of \gls{BPS}\is{bare
 phrase structure} objects provides a coherent notion of substructure and
-isomorphism, which makes statement of the \gls{EC}\is{Extension Condition}
+isomorphism, which makes statement of the \gls{EC}\is{extension condition}
 straightforward using either method described above.
 
 Pure set-theoretic representations limit the distinctions that can be made. To
@@ -693,26 +694,10 @@ much as is empirically possible, in line with the general Chomskian program.
 But where we do need to make such distinctions in a full account of human
 language, we must move to a richer theory of representations, as we have
 explored here. Studying substructures and isomorphism\is{isomorphism} as they can be used to
-state the \gls{EC}\is{Extension Condition} provide just one example of how understanding formal properties of
+state the \gls{EC}\is{extension condition} provide just one example of how understanding formal properties of
 the representation of syntactic objects can clarify the relationship between
 structure-building operations and the properties of the syntactic objects
 themselves.
-
-\nocite{ColSta2016}
-\nocite{Chomsky2000}
-\nocite{Chomsky2008}
-\nocite{fukui2011merge}
-\nocite{chang1990model}
-\nocite{Chomsky1995}
-\nocite{aczel}
-\nocite{Chomsky1955}
-\nocite{Chomsky1957}
-\nocite{Chomsky2000}
-\nocite{Chomsky1993}
-\nocite{conceptions}
-\nocite{lk}
-
-
 
 \printchapterglossary{}
 
@@ -722,8 +707,5 @@ We are very pleased to help honor Ian Roberts, who has encouraged the field to
 rethink so many topics in syntax. We are indebted to the two reviewers, whose
 comments helped us substantially improve the presentation.
 
-{\sloppy
-\printbibliography[heading=subbibliography,notkeyword=this]
-}
-
+{\sloppy\printbibliography[heading=subbibliography,notkeyword=this]}
 \end{document}
