@@ -355,7 +355,7 @@ result of \isi{movement} in \figref{fig:30:2} produces the \isi{linearization} i
 	\begin{xlist}
 		\small
 		\tabcolsep=5pt
-	\ex $L = \left\{\begin{tabular}{@{} *{5}{>{$\langle$}l<{$\rangle$,}}  @{}}	
+	\ex $L = \left\{\begin{tabular}{@{} *{5}{>{$\langle$}l<{$\rangle$}}  @{}}	
 	\zerosup{D}$'$,\zerosup{N}$'$ & DP$'$,\zerosup{C} & DP$'$,TP & DP$'$,DP$\dag$ & DP$'$,\zerosup{D}$\dag$\\
 	DP$'$,\zerosup{T} & DP$'$,VP & DP$'$,\zerosup{V} & DP$'$,DP & DP$'$,\zerosup{D} \\
 	 DP$'$,NP & DP$'$,\zerosup{N} & \zerosup{C},DP$\dag$ & \zerosup{C},\zerosup{D}$\dag$ & \zerosup{C},\zerosup{T} \\
@@ -585,7 +585,7 @@ linearization in~(\ref{ex:multi2lcad}).
 \begin{exe}
 	\ex \label{ex:multi2lcad}
 	\begin{xlist}
-        \ex $L = \left\{\begin{tabular}{@{} *{5}{>{$\langle$}l<{$\rangle$,}}  @{}} 
+        \ex $L = \left\{\begin{tabular}{@{} *{5}{>{$\langle$}l<{$\rangle$}}  @{}} 
           \zerosup{X},\zerosup{D} & \zerosup{X},NP & \zerosup{X},\zerosup{N} & XP,\zerosup{C} & XP,\zerosup{C} \\
            XP,TP & XP,DP$\dag$ & XP,\zerosup{D}$\dag$ & XP,\zerosup{T} & XP,VP \\
            XP,\zerosup{V} & \zerosup{C},DP$\dag$ & \zerosup{C},\zerosup{D}$\dag$ & \zerosup{C},VP & \zerosup{C},\zerosup{V}\\
@@ -659,7 +659,7 @@ well-formedness conditions:
 \begin{exe}
 	\ex \label{ex:multi2lca3d}
 	\begin{xlist}
-			\ex $L = \left\{\begin{tabular}{@{} *{5}{>{$\langle$}l<{$\rangle$,}}  @{}} 
+			\ex $L = \left\{\begin{tabular}{@{} *{5}{>{$\langle$}l<{$\rangle$}}  @{}} 
 			 \zerosup{X}, \zerosup{D} & \zerosup{X}, \zerosup{N} & \zerosup{D},\zerosup{N} & XP,\zerosup{C} & XP, DP$\dag$\\
 			 XP,\zerosup{T} & XP,\zerosup{V} & \zerosup{C},DP$\dag$ & \zerosup{C},\zerosup{T} & \zerosup{C}, \zerosup{V}\\
 			  DP$\dag$,\zerosup{T} & DP$\dag$,\zerosup{V} & \zerosup{T},\zerosup{V}
@@ -690,8 +690,8 @@ that are not in XP. But once XP is in $L$, all of the words in XP (i.e.,
 \emph{Q}, \emph{which} and \emph{flower}) will be linearized in the same way to
 every word not in XP. A feature of (\ref{ex:lca3}) is that it enforces
 contiguity on any phrase that enters~$L$.\footnote{There is a very close
-resemblance between contiguity and the central condition in Lisa Selkirk's
-match theory \citep{Selkirk2011}, which requires that phrases map onto
+resemblance between contiguity and the central condition in Lisa \citegen{Selkirk2011}
+match theory, which requires that phrases map onto
 prosodic units that contain every word within them. A tantalizing prospect is
 to reduce contiguity to this condition on the syntax/prosody mapping.} %
 \begin{exe}
@@ -749,13 +749,13 @@ The \gls{MLCA} has properties which should be regarded as features. Some of them
 	\ex \label{ex:features} \gls{MLCA} Features
 	\begin{xlist}
         \ex Preserves the goal of Kayne's \gls{LCA}, i.e. the generalization in (\ref{ex:precede}).
-		\ex Enforces contiguity on a moved phrase (i.e., blocks (\ref{ex:fixeddslin}b) and (\ref{ex:fixeddslin}c)).
+		\ex Enforces contiguity on a moved phrase (i.e., blocks (\ref{ex:fixeddslin}b--c)).
 		\ex Derives terseness.
 		\ex Produces linearizations corresponding to overt \isi{movement}.
 	\end{xlist}
 \end{exe}
 
-It also has a property that could be regarded a bug. If \isi{movement} has the properties I argued for in \citet{Johnson2012}, then it will not allow for a \isi{linearization} that corresponds to covert \isi{movement}. I regard that as a bug, and so I will offer an alternative \isi{linearization} scheme in the next section.
+It also has a property that could be regarded a bug. If \isi{movement} has the properties I argued for \citep{Johnson2012}, then it will not allow for a \isi{linearization} that corresponds to covert \isi{movement}. I regard that as a bug, and so I will offer an alternative \isi{linearization} scheme in the next section.
 
 % section \isi{multidominance} (end)
 
@@ -987,10 +987,8 @@ The \gls{PCA} therefore allows for the linearizations of \figref{ex:multi3} in~(
 
 This is probably more possibilities than should be allowed -- (\ref{ex:linvanilla}d) is a sufficiently rare way for a language to linearize this structure that we might want to block it -- but it comes close to what's cross-linguistically available. I will assume that the language particular choices narrow this set down to the particular outcomes appropriate for any particular language. English (a head initial, Specifier initial language) chooses~(\ref{ex:linvanilla}a).
 
-The second case study is (\ref{ex:multi3-2}).
-
 \begin{figure}
-\caption{\label{ex:multi3}\color{red}Please provide a caption}
+\caption{\label{ex:multi3-2}\color{red}Please provide a caption}
     \begin{tikzpicture}[baseline]
         \tikzset{level 1/.style={sibling distance=-80pt}}
         \Tree   [.\node(cp){CP};
@@ -1054,7 +1052,8 @@ The second case study is (\ref{ex:multi3-2}).
 %	\endjtree
 %\end{exe}
 
-As we've seen, \emph{which} and \emph{flower} have two paths in \figref{ex:multi3-2}, and so the largest $\Pi$ contains them both:
+The second case study is shown in \figref{ex:multi3-2}. As we've seen, \emph{which} and \emph{flower} have two paths in \figref{ex:multi3-2}, and so the largest $\Pi$ contains them both:
+
 \begin{exe}
 	\ex \label{ex:bigpimulti3}
 	\begin{xlist}
@@ -1070,7 +1069,6 @@ As we've seen, \emph{which} and \emph{flower} have two paths in \figref{ex:multi
 	\end{xlist}
 \end{exe}
 
-\newpage
 The values for $d$ are:
 \begin{exe}
 	\ex \label{ex:bigdmulti3}
@@ -1270,8 +1268,5 @@ Loccioni, Travis Major, Iara Mantenuto, Sozen Ozkan, Richard Stockwell, Carson
 Schutze and Tim Hunter. A special thanks to Leland Kusmer whose guidance has
 improved this paper in many ways.
 
-{\sloppy
-\printbibliography[heading=subbibliography,notkeyword=this]
-}
-
+{\sloppy\printbibliography[heading=subbibliography,notkeyword=this]}
 \end{document}
