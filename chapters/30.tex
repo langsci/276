@@ -31,7 +31,7 @@ develop an alternative implementation that preserves his leading idea.}
 
 In a series of papers, a book, and a dissertation, Jairo \textcite{Nunes1995, Nunes1996, Nunes1999, Nunes2004}
 has provided a compelling way of deriving a signature property of \isi{movement}, a
-property I will call \emph{terseness}. 
+property I will call \emph{terseness}.
 
 \begin{exe}
 	\ex \label{ex:terseness} Terseness\\
@@ -63,7 +63,7 @@ in \figref{fig:30:2}.\footnote{In order to focus on just one \isi{movement} oper
 of the \zerosup{T} to \zerosup{C} doesn't occur.}\largerpage[-2]
 
 \begin{figure}
-\caption{\color{red}Please provide a caption\label{fig:30:ds}}
+\caption{Pre-move structure\label{fig:30:ds}}
     \begin{forest}
         [CP
              [C$^0$]
@@ -89,7 +89,7 @@ of the \zerosup{T} to \zerosup{C} doesn't occur.}\largerpage[-2]
 \end{figure}
 
 \begin{figure}
-\caption{\color{red}Please provide a caption\label{fig:30:2}}
+\caption{Post-move structure\label{fig:30:2}}
 \begin{forest}
          [CP
                     [DP$'$
@@ -221,9 +221,9 @@ phrase markers that have specifiers. To see this, consider how (\ref{ex:lca1})
 applies to~(\ref{ex:specill1}).
 
 \ea\label{ex:specill1}
-    \begin{tikzpicture}[baseline]
+    \begin{tikzpicture}[baseline=(root.base)]
 
-        \Tree 	[.TP
+        \Tree 	[.\node(root){TP};
                     [.DP
                         [.D$^0$ the ]
                         [.NP
@@ -261,12 +261,12 @@ linearization in~(\ref{ex:specill1LL}).
 \begin{exe}
 	\ex \label{ex:sill1}
 	\begin{xlist}
-		\ex \label{ex:specill1L} 
+		\ex \label{ex:specill1L}
 		$\begin{array}[t]{@{}l@{\ }l@{}}
          L = & \{\smalltuple{\zerosup{D}, \zerosup{N}}, \smalltuple{DP, \zerosup{T}}, \smalltuple{DP, VP}, \smalltuple{DP, \zerosup{V}}, \smalltuple{\zerosup{T}, \zerosup{V}}, \smalltuple{TP\dag, \zerosup{D}},\\
              & \smalltuple{TP\dag, \zerosup{N}}\}
          \end{array}$
-		
+
 		\ex \label{ex:specill1LL}
 		$\left\{
 		% \text{%\small
@@ -355,7 +355,7 @@ result of \isi{movement} in \figref{fig:30:2} produces the \isi{linearization} i
 	\begin{xlist}
 		\small
 		\tabcolsep=5pt
-	\ex $L = \left\{\begin{tabular}{@{} *{5}{>{$\langle$}l<{$\rangle$}}  @{}}	
+	\ex $L = \left\{\begin{tabular}{@{} *{5}{>{$\langle$}l<{$\rangle$}}  @{}}
 	\zerosup{D}$'$,\zerosup{N}$'$ & DP$'$,\zerosup{C} & DP$'$,TP & DP$'$,DP$\dag$ & DP$'$,\zerosup{D}$\dag$\\
 	DP$'$,\zerosup{T} & DP$'$,VP & DP$'$,\zerosup{V} & DP$'$,DP & DP$'$,\zerosup{D} \\
 	 DP$'$,NP & DP$'$,\zerosup{N} & \zerosup{C},DP$\dag$ & \zerosup{C},\zerosup{D}$\dag$ & \zerosup{C},\zerosup{T} \\
@@ -442,13 +442,13 @@ copy?\is{copy theory of movement}
 \section{Multidominance} % (fold)
 \label{sec:multidominance}
 
-A simple way of explaining why a term and  are the same thing for antisymmetry
-is that they \emph{are} the same thing. Rather than modeling \isi{movement} as an
-operation that creates a copy\is{copy theory of movement} of a term and puts
-that term in an additional position, we could model \isi{movement} as an operation
-that puts one term in two positions. This is a thesis that \citet{Engdahl1980},
-\citet{Starke2001}, \citet{deVries2007}, \citet{Gartner2002}, among others,
-have suggested.
+A simple way of explaining why a term and its copy are the same thing for
+antisymmetry is that they \emph{are} the same thing. Rather than modeling
+\isi{movement} as an operation that creates a copy\is{copy theory of movement}
+of a term and puts that term in an additional position, we could model
+\isi{movement} as an operation that puts one term in two positions. This is a
+thesis that \citet{Engdahl1980}, \citet{Starke2001}, \citet{deVries2007},
+\citet{Gartner2002}, among others, have suggested.
 
 An immediate problem with this view, though, is that it leads to the
 expectation that the denotation a phrase has will be the same in both of the
@@ -457,7 +457,7 @@ this thesis that allows one term to have two positions in a \isi{phrase marker}.
 would give \figref{fig:30:2} the representation in \figref{ex:multi1}.
 
 \begin{figure}
-\caption{\color{red}Please provide a caption\label{ex:multi1}}
+\caption{Remerge structure\label{ex:multi1}}
     \begin{tikzpicture}[baseline, scale=.95]
         \tikzset{level 1/.style={sibling distance=-80pt}}
         \Tree   [.\node(cp){CP};
@@ -505,7 +505,7 @@ would give \figref{fig:30:2} the representation in \figref{ex:multi1}.
 %\end{exe}
 
 There is evidence that the semantics of constituent questions of this kind must be able to involve a binder/variable relation. In principle, we want phrasal \isi{movement} to be able to cause a moved phrase to bind a variable in the position it moves from. The representation in \figref{ex:multi1} makes that possibility obscure. The single phrase, \emph{which flower}, would not seem to be able to simultaneously have the meaning of a variable and the meaning of the term that binds that variable.%
-\footnote{But see \cite{Engdahl1986} for a method.} %
+\footnote{But see \textcite{Engdahl1986} for a method.} %
 We want to define ``copy of'' so that it gives the equivalent of \figref{ex:multi1} for antisymmetry, but not for the meanings involved.
 
 In \cite{Johnson2012}, I argue that the solution to this dilemma comes from
@@ -514,7 +514,7 @@ of the term that has moved. If we represent this additional material with
 ``Q,'' then \figref{ex:multi1} can be replaced by \figref{ex:multi2}.
 
 \begin{figure}
-    \caption{\color{red}Please provide a caption\label{ex:multi2}}
+    \caption{Parallel Merge structure\label{ex:multi2}}
     \begin{tikzpicture}[baseline]
         \tikzset{level 1/.style={sibling distance=-80pt}}
         \Tree   [.\node(cp){CP};
@@ -585,7 +585,7 @@ linearization in~(\ref{ex:multi2lcad}).
 \begin{exe}
 	\ex \label{ex:multi2lcad}
 	\begin{xlist}
-        \ex $L = \left\{\begin{tabular}{@{} *{5}{>{$\langle$}l<{$\rangle$}}  @{}} 
+        \ex $L = \left\{\begin{tabular}{@{} *{5}{>{$\langle$}l<{$\rangle$}}  @{}}
           \zerosup{X},\zerosup{D} & \zerosup{X},NP & \zerosup{X},\zerosup{N} & XP,\zerosup{C} & XP,\zerosup{C} \\
            XP,TP & XP,DP$\dag$ & XP,\zerosup{D}$\dag$ & XP,\zerosup{T} & XP,VP \\
            XP,\zerosup{V} & \zerosup{C},DP$\dag$ & \zerosup{C},\zerosup{D}$\dag$ & \zerosup{C},VP & \zerosup{C},\zerosup{V}\\
@@ -659,7 +659,7 @@ well-formedness conditions:
 \begin{exe}
 	\ex \label{ex:multi2lca3d}
 	\begin{xlist}
-			\ex $L = \left\{\begin{tabular}{@{} *{5}{>{$\langle$}l<{$\rangle$}}  @{}} 
+			\ex $L = \left\{\begin{tabular}{@{} *{5}{>{$\langle$}l<{$\rangle$}}  @{}}
 			 \zerosup{X}, \zerosup{D} & \zerosup{X}, \zerosup{N} & \zerosup{D},\zerosup{N} & XP,\zerosup{C} & XP, DP$\dag$\\
 			 XP,\zerosup{T} & XP,\zerosup{V} & \zerosup{C},DP$\dag$ & \zerosup{C},\zerosup{T} & \zerosup{C}, \zerosup{V}\\
 			  DP$\dag$,\zerosup{T} & DP$\dag$,\zerosup{V} & \zerosup{T},\zerosup{V}
@@ -793,7 +793,7 @@ the \isi{linearization} of \figref{ex:multi3} that corresponds to overt \isi{mov
 in~(\ref{ex:linmulti3}).
 
 \begin{figure}[hb]
-\caption{\color{red}Please provide a caption\label{ex:multi3}}
+\caption{Wh-movement structure\label{ex:multi3}}
     \begin{tikzpicture}[baseline]
         \tikzset{level 1/.style={sibling distance=-80pt}}
         \Tree   [.\node(cp){CP};
@@ -920,9 +920,9 @@ We'll look at two case studies to see how the \gls{PCA} does its job. Consider
 first a vanilla phrase-marker with no \isi{multidominance}.
 
 \ea\label{ex:vanilla}
-    \begin{tikzpicture}[baseline]
+    \begin{tikzpicture}[baseline=(root.base)]
 
-        \Tree 	[.TP
+        \Tree 	[.\node(root){TP};
                     [.DP
                         [.D$^0$ she ]
                     ]
@@ -988,7 +988,8 @@ The \gls{PCA} therefore allows for the linearizations of \figref{ex:multi3} in~(
 This is probably more possibilities than should be allowed -- (\ref{ex:linvanilla}d) is a sufficiently rare way for a language to linearize this structure that we might want to block it -- but it comes close to what's cross-linguistically available. I will assume that the language particular choices narrow this set down to the particular outcomes appropriate for any particular language. English (a head initial, Specifier initial language) chooses~(\ref{ex:linvanilla}a).
 
 \begin{figure}
-\caption{\label{ex:multi3-2}\color{red}Please provide a caption}
+    \caption{\label{ex:multi3-2}Wh-movement structured (repeated
+    from~\Cref{ex:multi3})}
     \begin{tikzpicture}[baseline]
         \tikzset{level 1/.style={sibling distance=-80pt}}
         \Tree   [.\node(cp){CP};
