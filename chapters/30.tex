@@ -1,4 +1,5 @@
 \documentclass[output=paper]{langsci/langscibook}
+\ChapterDOI{10.5281/zenodo.4280639}
 
 \author{Kyle Johnson\affiliation{University of Massachusetts, Amherst}}
 \title{Rethinking linearization}
@@ -176,7 +177,7 @@ proposal, then, is that antisymmetry cannot distinguish one word from.
 The structure in \figref{fig:30:2} is not pronounced with two instances of \emph{which} and
 \emph{flower} because a \isi{linearization} that contains both
 \emph{which$'$}$<$\emph{she} and \emph{she}$<$\emph{which} will be a violation of
-antisymmetry. This is terseness.
+antisymmetry. This is terseness.\pagebreak
 
 One goal of this paper is to define copies so that they have the effect of
 invoking antisymmetry in the way that Nunes envisions. That definition will use
@@ -218,7 +219,7 @@ algorithm along the lines of~(\ref{ex:lca1}).
 
 As Kayne notes, (\ref{ex:lca1}) needs to be weakened if it is to work for
 phrase markers that have specifiers. To see this, consider how (\ref{ex:lca1})
-applies to~(\ref{ex:specill1}).
+applies to~(\ref{ex:specill1}).\largerpage[-2]
 
 \ea\label{ex:specill1}
     \begin{tikzpicture}[baseline=(root.base)]
@@ -255,7 +256,7 @@ applies to~(\ref{ex:specill1}).
 %	\endjtree
 %\end{exe}
 
-The $L$ for (\ref{ex:specill1}) is (\ref{ex:specill1L}), and this produces the
+\noindent The $L$ for (\ref{ex:specill1}) is (\ref{ex:specill1L}), and this produces the
 linearization in~(\ref{ex:specill1LL}).
 
 \begin{exe}
@@ -284,7 +285,7 @@ linearization in~(\ref{ex:specill1LL}).
 	\end{xlist}
 \end{exe}
 
-(\ref{ex:specill1LL}) violates antisymmetry.
+\noindent (\ref{ex:specill1LL}) violates antisymmetry.
 
 \begin{exe}
 	\ex \label{ex:antisymmb} Antisymmetry\\
@@ -712,7 +713,7 @@ phrase marker are allowed to violate contiguity because there is a way of
 satisfying totality without considering all the positions they are in.
 
 Unfortunately, this feature of (\ref{ex:lca3}) prevents any other linearization
-of \figref{ex:multi2}, including the one Nunes' theory countenanced
+of\linebreak\figref{ex:multi2}, including the one Nunes' theory countenanced
 in~(\ref{ex:covert}).
 
 \begin{exe}
@@ -749,7 +750,7 @@ The \gls{MLCA} has properties which should be regarded as features. Some of them
 	\ex \label{ex:features} \gls{MLCA} Features
 	\begin{xlist}
         \ex Preserves the goal of Kayne's \gls{LCA}, i.e. the generalization in (\ref{ex:precede}).
-		\ex Enforces contiguity on a moved phrase (i.e., blocks (\ref{ex:fixeddslin}b--c)).
+		\ex Enforces contiguity on a moved phrase (i.e., blocks \ref{ex:fixeddslin}b--c).
 		\ex Derives terseness.
 		\ex Produces linearizations corresponding to overt \isi{movement}.
 	\end{xlist}
@@ -792,44 +793,6 @@ for multidominant representations. To see this, consider \figref{ex:multi3} and
 the \isi{linearization} of \figref{ex:multi3} that corresponds to overt \isi{movement},
 in~(\ref{ex:linmulti3}).
 
-\begin{figure}[hb]
-\caption{Wh-movement structure\label{ex:multi3}}
-    \begin{tikzpicture}[baseline]
-        \tikzset{level 1/.style={sibling distance=-80pt}}
-        \Tree   [.\node(cp){CP};
-                    [.CP$\dag$
-                        C$^0$
-                        [.TP
-                            [.DP$\dag$
-                                [.D$^{0}\dag$ she ]
-                            ]
-                            [.TP$\dag$
-                                [.T$^0$ should ]
-                                [.VP
-                                    [.VP$\dag$
-                                        [.V$^0$ bring ]
-                                        [.\node(dp){DP};
-                                            [.D$^0$ which ]
-                                            [.NP
-                                                [.N$^0$ flower ]
-                                            ]
-                                        ]
-                                    ]
-                                    [.PP
-                                        [.P$^0$ here ]
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ]
-                    [.\node(xp){XP};
-                        [.X$^0$ Q ]
-                        \edge [draw=none]; {}
-                    ]
-                ]
-            \draw [bend left=40] (xp.south) to (dp.north);
-    \end{tikzpicture}
-\end{figure}
 %
 %\begin{exe}
 %	\ex \label{ex:multi3}
@@ -878,6 +841,46 @@ Two paths that contain DP and NP in \figref{ex:multi3} are~(\ref{ex:path1}).
 \end{exe}
 
 (\ref{ex:linmulti3}) makes (\ref{ex:bad1}) and (\ref{ex:bad2}) violate (\ref{ex:thirdlaw}); neither \emph{flower} (=d(NP)) nor \emph{which flower} (=d(DP)) are contiguous substrings of d(TP) (=\emph{she should bring which flower here}), d(TP$\dag$) (=\emph{should bring which flower here}), d(VP) (=\emph{bring which flower here}) or d(VP$\dag$) (=\emph{bring which flower}). If contiguity were to be expressed in a way that derives (\ref{ex:thirdlaw}), then only covert \isi{movement} operations would be permitted. That's not a desirable outcome. Notice, however, that if the paths in (\ref{ex:bad1}) and (\ref{ex:bad2}) are ignored, the \isi{linearization} in (\ref{ex:linmulti3}) doesn't violate~(\ref{ex:thirdlaw}). Conversely, the paths in (\ref{ex:bad1b}) and (\ref{ex:bad2b}) violate (\ref{ex:thirdlaw}) if the \isi{linearization} is~(\ref{ex:covertn}).
+
+\begin{figure}
+\caption{Wh-movement structure\label{ex:multi3}}
+    \begin{tikzpicture}[baseline]
+        \tikzset{level 1/.style={sibling distance=-80pt}}
+        \Tree   [.\node(cp){CP};
+                    [.CP$\dag$
+                        C$^0$
+                        [.TP
+                            [.DP$\dag$
+                                [.D$^{0}\dag$ she ]
+                            ]
+                            [.TP$\dag$
+                                [.T$^0$ should ]
+                                [.VP
+                                    [.VP$\dag$
+                                        [.V$^0$ bring ]
+                                        [.\node(dp){DP};
+                                            [.D$^0$ which ]
+                                            [.NP
+                                                [.N$^0$ flower ]
+                                            ]
+                                        ]
+                                    ]
+                                    [.PP
+                                        [.P$^0$ here ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                    [.\node(xp){XP};
+                        [.X$^0$ Q ]
+                        \edge [draw=none]; {}
+                    ]
+                ]
+            \draw [bend left=40] (xp.south) to (dp.north);
+    \end{tikzpicture}
+\end{figure}
+
 \begin{exe}
 	\ex \label{ex:covertn} Q she should bring which flower here
 \end{exe}
