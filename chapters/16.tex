@@ -320,7 +320,7 @@ preverbal constituent and distribution in a wider context.
 
 There seems to be no categorial restriction on the initial constituent in the
 Dutch urban vernacular dataset. There are determiner phrases (DPs),
-prepositional phrases (PPs), adverbial phrases (APs) or entire clauses (CPs)
+prepositional\linebreak phrases (PPs), adverbial phrases (APs) or entire clauses (CPs)
 shown in examples \eqref{exDP1}, \eqref{exPP}, \eqref{exAP} and~\eqref{exCP}
 respectively:
 
@@ -828,18 +828,32 @@ frame-setter \emph{toen} `then' in~\eqref{exv3UD}:\largerpage[3]
 
 \begin{multicols}{2}\raggedcolumns
 \ea\label{exv3UD}
-\begin{tikzpicture}[baseline=(root.base)]%-.79\baselineskip]%,tree,scale=1.0,every tree node/.style={scale=1}]
-\tikzset{every tree node/.style={align=center,anchor=north}}
-\Tree
-    [.\node(root){FrameP};
-	[.{\emph{Toen}} ]
-	[.ForceP
-		[.SpecForce\\\emph{ze} ]
-		[.Force'
-            \node(v2){Force\\\emph{vroegen$_i$}};
-            [.FinP \edge[roof]; \node(t){\emph{t$_i$ ID}}; ] ] ] ] ]
-    \draw[arrow, bend left] (t.west) to (v2.south) ;
-\end{tikzpicture}\columnbreak
+% \begin{tikzpicture}[baseline=(root.base)]%-.79\baselineskip]%,tree,scale=1.0,every tree node/.style={scale=1}]
+% \tikzset{every tree node/.style={align=center,anchor=north}}
+% \Tree
+%     [.\node(root){FrameP};
+% 	[.{\emph{Toen}} ]
+% 	[.ForceP
+% 		[.SpecForce\\\emph{ze} ]
+% 		[.Force'
+%             \node(v2){Force\\\emph{vroegen$_i$}};
+%             [.FinP \edge[roof]; \node(t){\emph{t$_i$ ID}}; ] ] ] ] ]
+%     
+% \end{tikzpicture}
+\begin{forest} for tree={fit=tight}
+[FrameP
+[\emph{Toen}] [ForceP
+  [SpecForce\\\emph{ze},align=center]
+  [Force'
+    [Force\\\emph{vroegen$_i$},align=center,name=v2]
+    [FinP [\emph{t$_i$ ID},roof,name=t]]
+  ]
+]
+]
+\draw[arrow, bend left] (t.west) to (v2.south) ;
+\end{forest}
+
+\columnbreak
 \ex\label{exsbjpro4-ft} Standard \ili{Dutch} -- familiar topic\\
     \gll Toen ze \textit{vroegen} ID.\\
     then they asked.\Pl{} ID\\
@@ -968,11 +982,19 @@ parameters associated with the possible switch in register. This, however, goes
 beyond the scope of the present paper and we leave this for future research.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{V3 innovations in a diachronic typology of V2}
+\subsection{V3 innovations in a diachronic typology of V2}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Recall Wolfe's typology of V2\is{V2 word order} languages from \Cref{sec:ana1}, which we present in
-\figref{fig:16:1}.\largerpage[-2]
+\figref{fig:16:1}. \citet{Wolfe:2017} argues that older \ili{Germanic} varieties provide more
+options for V3\is{V3 word order} orders. Early Medieval \ili{Romance} and Early \ili{Old High German} allowed
+both topics and foci in sentence-initial position and are thus classified as a
+\enquote{Fin-V2} system. In later \ili{Old French} and Spanish and New High \ili{German},
+on the other hand, only a frame-setter and either a topic\is{topic} or a focus\is{focus}
+constituent was found sentence-initially, making them \enquote{Force V2\is{V2 word order} system 1}
+languages.  In both \ili{Germanic} and \ili{Romance}, Wolfe thus observes a change from
+Fin-V2 to Force-V2 (and within Force-V2 from system 1 to system 2, which
+ultimately happened in Modern \ili{Dutch} and \ili{German}).\largerpage[-2]
 
 \begin{figure}[h]
 \caption{V3* in V2\is{V2 word order} languages \parencite[31]{Wolfe:2017}\label{fig:16:1}}
@@ -1024,16 +1046,6 @@ Recall Wolfe's typology of V2\is{V2 word order} languages from \Cref{sec:ana1}, 
 
 \end{tikzpicture}
 \end{figure}
-
-\noindent \citet{Wolfe:2017} argues that older \ili{Germanic} varieties provide more
-options for V3\is{V3 word order} orders. Early Medieval \ili{Romance} and Early \ili{Old High German} allowed
-both topics and foci in sentence-initial position and are thus classified as a
-\enquote{Fin-V2} system. In later \ili{Old French} and Spanish and New High \ili{German},
-on the other hand, only a frame-setter and either a topic\is{topic} or a focus\is{focus}
-constituent was found sentence-initially, making them \enquote{Force V2\is{V2 word order} system 1}
-languages.  In both \ili{Germanic} and \ili{Romance}, Wolfe thus observes a change from
-Fin-V2 to Force-V2 (and within Force-V2 from system 1 to system 2, which
-ultimately happened in Modern \ili{Dutch} and \ili{German}).
 
 From this perspective, the optional V3\is{V3 word order} orders in the
 \ili{Dutch} urban varieties could indicate that this variety of \ili{Dutch} is
