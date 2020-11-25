@@ -8,12 +8,12 @@
 % Everything following a % is ignored
 % Some lines start with %. Remove the % to include them
 
-\documentclass[output=book
-        ,collection
-        ,collectionchapter
-        ,biblatex
+\documentclass[output=book,
+        collection,
+        collectionchapter,
+%         draftmode
 % 	        ,coverus
-		  ]{./langscibook}
+		  ]{langscibook}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -40,7 +40,7 @@
 \currentpdfbookmark{Contents}{name} % adds a PDF bookmark
 \tableofcontents
 
-\include{chapters/acknowledgments}
+% \include{chapters/acknowledgments}
 \includepaper{chapters/preface}
 
 \mainmatter
@@ -52,29 +52,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \part{Architectural issues in morphosyntax}
-\includepaper{chapters/24} % Watumull and Chomsky
-\includepaper{chapters/25} %
-\includepaper{chapters/26} %
-\includepaper{chapters/27} % Kenesei
-\includepaper{chapters/28} %
-\includepaper{chapters/29} % Tsoulas
-\includepaper{chapters/30} %
-\includepaper{chapters/31} %
-\includepaper{chapters/32} %
-\includepaper{chapters/33} %
-\includepaper{chapters/34} %
-\includepaper{chapters/35} %
-\includepaper{chapters/36} %
+\includepaper{chapters/24} 
+\includepaper{chapters/25} 
+\includepaper{chapters/26} 
+\includepaper{chapters/27} 
+\includepaper{chapters/28} 
+\includepaper{chapters/29} 
+\includepaper{chapters/30} 
+\includepaper{chapters/31} 
+\includepaper{chapters/32} 
+\includepaper{chapters/33} 
+\includepaper{chapters/34} 
+\includepaper{chapters/35} 
+\includepaper{chapters/36} 
 \part{Structural issues in morphosyntax}
-\includepaper{chapters/14} %
-\includepaper{chapters/15} %
-\includepaper{chapters/16}
-\includepaper{chapters/17} %
-\includepaper{chapters/18} %
-\includepaper{chapters/19} %
-\includepaper{chapters/20} %
-\includepaper{chapters/21} %
-\includepaper{chapters/22} %
+\includepaper{chapters/14} 
+\includepaper{chapters/15} 
+\includepaper{chapters/16} 
+\includepaper{chapters/17}  
+\includepaper{chapters/18} 
+\includepaper{chapters/19} 
+\includepaper{chapters/20} 
+\includepaper{chapters/21} 
+\includepaper{chapters/22} 
 
 
 \input{backmatter.tex}
